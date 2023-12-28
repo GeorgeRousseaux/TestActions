@@ -1,4 +1,4 @@
-name: Authenticate Azure
+name: Azure Actions
 on:
   workflow_dispatch:
   pull_request:
