@@ -42,7 +42,7 @@ jobs:
     - name: 'Login into Azure'
       uses: Azure/login@v1
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS 
+        creds: ${{ secrets.INFRA_SP_SECRET }}
         enable-AzPSSession: true
         
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
