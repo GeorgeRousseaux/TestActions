@@ -39,7 +39,6 @@ jobs:
     - name: Folder
       run: |
             pwd
-            cd main
             ls
             
       
@@ -51,7 +50,7 @@ jobs:
         ARM_CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
         ARM_SUBSCRIPTION_ID: "4d000790-f279-46d9-811e-45f8ddf9a3aa"
         ARM_TENANT_ID: "6Ev8Q~20SNO2xXANk2_lmRWeR5fV3SRahz_MBcs9"
-      working-directory: ./main
+    #  working-directory: ./main
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: 
