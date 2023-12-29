@@ -41,21 +41,16 @@ jobs:
       with:
        cli_config_credentials_token: ${{ secrets.INFRA_SP_SECRET }}
        
-    # Login into Azure
-    - name: 'Login into Azure'
-      uses: Azure/login@v1
-      with:
-        creds: ${{ secrets.INFRA_SP_SECRET }}
-        enable-AzPSSession: true
 
-    - name: 'Run az commands'
-      run: |
-          az account show
-          az group list
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
       run: terraform init
-      #working-directory: workflows
+      env:
+        ARM_CLIENT_ID: "0eba58bf-9f11-4836-98b9-def160de2a51" # This doesn't have to be a secret. Client IDs are not sensitive.
+        ARM_CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+        ARM_SUBSCRIPTION_ID: "4d000790-f279-46d9-811e-45f8ddf9a3aa"
+        ARM_TENANT_ID: "6Ev8Q~20SNO2xXANk2_lmRWeR5fV3SRahz_MBcs9"
+
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
