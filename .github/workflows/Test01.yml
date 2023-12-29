@@ -30,9 +30,6 @@ jobs:
 
  
 
-    # Checkout the repository to the GitHub Actions runner
-    - name: Checkout
-      uses: actions/checkout@v3.6.0
 
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
@@ -50,15 +47,3 @@ jobs:
         ARM_TENANT_ID: "6Ev8Q~20SNO2xXANk2_lmRWeR5fV3SRahz_MBcs9"
 
 
-    # Checks that all Terraform configuration files adhere to a canonical format
-    - name: Terraform Format
-      run: terraform fmt -check
-
-    # Generates an execution plan for Terraform
-    - name: Terraform Plan
-      run: 
-            terraform plan -input=false -no-color -out tf.plan
-            
-     # Generates an execution plan for Terraform
-    - name: Terraform Apply  
-      run: terraform apply -auto-approve -input=false
