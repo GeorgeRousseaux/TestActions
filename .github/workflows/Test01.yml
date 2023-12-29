@@ -37,9 +37,9 @@ jobs:
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v1
+      uses: hashicorp/setup-terraform@v2
       with:
-       cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+       cli_config_credentials_token: ${{ secrets.INFRA_SP_SECRET }}
        
     # Login into Azure
     - name: 'Login into Azure'
@@ -55,7 +55,7 @@ jobs:
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
       run: terraform init
-
+      working-directory: ./main 
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
@@ -64,7 +64,7 @@ jobs:
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: 
-            terraform plan -input=false
+            terraform plan -input=false -no-color -out tf.plan
             
      # Generates an execution plan for Terraform
     - name: Terraform Apply  
