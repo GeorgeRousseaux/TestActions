@@ -47,3 +47,9 @@ jobs:
         ARM_TENANT_ID: "6Ev8Q~20SNO2xXANk2_lmRWeR5fV3SRahz_MBcs9"
 
 
+    # Generates an execution plan for Terraform
+    - name: Terraform Plan
+      run: 
+            terraform plan -input=false -no-color -out tf.plan
+
+
