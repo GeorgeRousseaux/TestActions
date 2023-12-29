@@ -63,4 +63,5 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: terraform plan terraform plan -no-color -input=false
+      run: 
+            terraform plan -no-color -input=false
