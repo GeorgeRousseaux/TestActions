@@ -48,7 +48,7 @@ jobs:
       run: terraform init
       env:
         ARM_CLIENT_ID: "0eba58bf-9f11-4836-98b9-def160de2a51" # This doesn't have to be a secret. Client IDs are not sensitive.
-        ARM_CLIENT_SECRET: secret.ARM_CLIENT_SECRET
+        ARM_CLIENT_SECRET: secrets.ARM_CLIENT_SECRET
         ARM_SUBSCRIPTION_ID: "4d000790-f279-46d9-811e-45f8ddf9a3aa"
         ARM_TENANT_ID: "2bd38efa-c424-4fff-9fff-bfe89a641b09"
     #  working-directory: ./main
@@ -59,8 +59,8 @@ jobs:
             terraform plan -input=false -no-color -out tf.plan
       env:
         ARM_CLIENT_ID: "0eba58bf-9f11-4836-98b9-def160de2a51" # This doesn't have to be a secret. Client IDs are not sensitive.
-        ARM_CLIENT_SECRET: secret.ARM_CLIENT_SECRET
-        ARM_SUBSCRIPTION_ID: "4d000790-f279-46d9-811e-45f8ddf9a3aa"
+        ARM_CLIENT_SECRET: secrets.ARM_CLIENT_SECRET
+        
         ARM_TENANT_ID: "2bd38efa-c424-4fff-9fff-bfe89a641b09"
 
     - name: Terraform Apply
@@ -69,7 +69,8 @@ jobs:
             terraform apply -auto-approve
       env:
         ARM_CLIENT_ID: "0eba58bf-9f11-4836-98b9-def160de2a51" # This doesn't have to be a secret. Client IDs are not sensitive.
-        ARM_CLIENT_SECRET: secret.ARM_CLIENT_SECRET
+        ARM_CLIENT_SECRET: secrets.ARM_CLIENT_SECRET
+        ARM_SUBSCRIPTION_ID: "4d000790-f279-46d9-811e-45f8ddf9a3aa"
         ARM_TENANT_ID: "2bd38efa-c424-4fff-9fff-bfe89a641b09"
             
             
