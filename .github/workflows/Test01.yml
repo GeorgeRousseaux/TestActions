@@ -56,7 +56,7 @@ jobs:
     - name: Terraform Plan
       run: 
             #terraform plan -input=false -no-color -out tf.plan
-            terraform plan
+            terraform plan -input=false -no-color -out tf.plan
       env:
         ARM_CLIENT_ID: "0eba58bf-9f11-4836-98b9-def160de2a51" # This doesn't have to be a secret. Client IDs are not sensitive.
         ARM_CLIENT_SECRET: "6Ev8Q~20SNO2xXANk2_lmRWeR5fV3SRahz_MBcs9"
@@ -65,8 +65,8 @@ jobs:
 
     - name: Terraform Apply
       run: 
-            #terraform plan -input=false -no-color -out tf.plan
-            terraform apply -lock=false
+            
+            terraform apply 
       env:
         ARM_CLIENT_ID: "0eba58bf-9f11-4836-98b9-def160de2a51" # This doesn't have to be a secret. Client IDs are not sensitive.
         ARM_CLIENT_SECRET: "6Ev8Q~20SNO2xXANk2_lmRWeR5fV3SRahz_MBcs9"
