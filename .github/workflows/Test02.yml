@@ -39,6 +39,7 @@ jobs:
     - name: Folder
       run: |
             pwd
+            echo ${{test}}
             
       
  
