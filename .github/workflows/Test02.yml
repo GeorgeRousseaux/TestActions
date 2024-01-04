@@ -39,7 +39,8 @@ jobs:
     - name: Folder
       run: |
             echo "jorge"
-            echo "$ARM_CLIENT_ID"
+            var1 = "rousseaux"
+            echo "$var1"
             #pwd
             #ls
             #cat ./test.tf
