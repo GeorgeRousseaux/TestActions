@@ -42,11 +42,4 @@ jobs:
             echo "test"
             echo ${{ARM_CLIENT_ID}}
            
-      
-    # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
-    - name: Terraform Init
-      #run: terraform init
-
-    #  working-directory: ./main
-    # Generates an execution plan for Terraform
-   
+ 
