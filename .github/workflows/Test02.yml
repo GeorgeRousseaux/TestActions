@@ -39,6 +39,7 @@ jobs:
     - name: Folder
       run: |
             echo "jorge"
+            echo ${{ARM_CLIENT_ID}}
             #pwd
             #ls
             #cat ./test.tf
