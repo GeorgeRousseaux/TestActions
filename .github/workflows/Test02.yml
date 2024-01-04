@@ -41,7 +41,7 @@ jobs:
       run: |
             pwd
             echo "jorge"
-            echo "."
+            echo "${{vars.TEST}}"
       
           
 
