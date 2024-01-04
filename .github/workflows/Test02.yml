@@ -39,7 +39,7 @@ jobs:
     - name: Folder
       run: |
             echo "jorge"
-            set varx = "rousseaux"
+            varx = $"rousseaux"
             echo "${{varx}}"
             #pwd
             #ls
