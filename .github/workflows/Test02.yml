@@ -40,7 +40,7 @@ jobs:
       run: |
             echo "jorge"
             var1 = "rousseaux"
-            echo "$var1"
+            echo ${{var1}}
             #pwd
             #ls
             #cat ./test.tf
