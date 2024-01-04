@@ -39,8 +39,8 @@ jobs:
     - name: Folder
       run: |
             echo "jorge"
-            varx = $"rousseaux"
-            #echo "${{varx}}"
+            
+            #echo ${{ARM_CLIENT_ID}}
             #pwd
             #ls
             #cat ./test.tf
