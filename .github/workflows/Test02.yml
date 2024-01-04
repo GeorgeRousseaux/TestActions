@@ -39,8 +39,8 @@ jobs:
     - name: Folder
       run: |
             echo "jorge"
-            var1 = "rousseaux"
-            echo ${{var1}}
+            set varx = "rousseaux"
+            echo ${{varx}}
             #pwd
             #ls
             #cat ./test.tf
