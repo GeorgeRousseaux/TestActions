@@ -38,9 +38,10 @@ jobs:
 
     - name: Folder
       run: |
-            pwd
-            ls
-            cat ./test.tf
+            echo "jorge"
+            #pwd
+            #ls
+            #cat ./test.tf
             
       
   
