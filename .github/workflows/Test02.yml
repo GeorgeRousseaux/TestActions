@@ -38,6 +38,7 @@ jobs:
 
     - name: Folder
       run: |
+            echo $ARM_CLIENT_ID
             pwd
             ls
             cat ./test.tf
