@@ -37,8 +37,12 @@ jobs:
       uses: hashicorp/setup-terraform@v2
 
     - name: Folder
+ 
       run: |
             pwd
+            echo "jorge"
+            echo "."
+      
           
 
             
