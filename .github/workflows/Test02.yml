@@ -44,7 +44,12 @@ jobs:
             echo "${{vars.TEST}}"
             echo "${{vars.ARM_CLIENT_ID}}"
       
-  
+    - name: 'Log into Azure using github secret AZURE_CREDENTIALS'
+      uses: Azure/login@v1
+      with:
+          creds: ${{ secrets.INFRA_SP_SECRET }}
+          enable-AzPSSession: true
+
      # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
       run: terraform init           
