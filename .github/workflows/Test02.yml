@@ -42,7 +42,7 @@ jobs:
             pwd
             echo "jorge"
             echo "${{vars.TEST}}"
-            echo "${{vars.ARM_ENV}}"
+            echo "${{vars.ARM_ENV}.ARM_CLIENT_ID}"
       
   
             
