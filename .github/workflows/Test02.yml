@@ -37,12 +37,13 @@ jobs:
       uses: hashicorp/setup-terraform@v2
 
     - name: Folder
+
       run: |
             echo $ARM_CLIENT_ID
             pwd
             ls
             cat ./test.tf
-            
+            environment: development
       
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
