@@ -69,4 +69,5 @@ jobs:
  
       run: |
             pwd
+            /usr/bin/git log -1 --format='%H'
             cat tfplan.txt
