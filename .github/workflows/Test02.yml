@@ -63,7 +63,7 @@ jobs:
     - name: Terraform Plan
       run: 
             #terraform plan -input=false -no-color -out tf.plan
-            terraform plan -input=false -out tf.plan > tfp.txt
+            terraform plan -input=false -out tf.plan > tfplan.txt
       
     - name: tf out plan file result
  
