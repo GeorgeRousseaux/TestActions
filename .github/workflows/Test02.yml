@@ -64,6 +64,9 @@ jobs:
       run: 
             #terraform plan -input=false -no-color -out tf.plan
             terraform plan -input=false -out tf.plan > tf.txt
+      
+    - name: tf out plan file result
+ 
+      run: |
             pwd
-            cat tf.txt
-
+            ls
