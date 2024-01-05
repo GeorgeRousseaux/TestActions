@@ -74,7 +74,7 @@ jobs:
     - name: 'Log into Azure using github secret AZURE_CREDENTIALS'
       uses: Azure/login@v1
       with:
-          creds: ${{ secrets.INFRA_SP_SECRET }}
+          creds: ${{ vars.ARM_DEV }}
           enable-AzPSSession: true
 
     - name: 'Run az commands'
