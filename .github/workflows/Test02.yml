@@ -81,4 +81,4 @@ jobs:
       run: |
           az account show
           az group list
-          azcopy copy '.\tf.plan' 'https://k1xtfstateinfra001.blob.core.windows.net/terraform-workflows/' --recursive --preserve-smb-permissions=true --preserve-smb-info=true
+          azcopy copy '.\tf.plan' 'https://k1xtfstateinfra001.blob.core.windows.net/terraform-workflows/' 
