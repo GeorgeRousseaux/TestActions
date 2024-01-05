@@ -14,6 +14,7 @@ on:
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
 env:
   ARM_CLIENT_ID: "0eba58bf-9f11-4836-98b9-def160de2a51" # This doesn't have to be a secret. Client IDs are not sensitive.
   ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET}}
@@ -62,5 +63,7 @@ jobs:
     - name: Terraform Plan
       run: 
             #terraform plan -input=false -no-color -out tf.plan
-            terraform plan -input=false -no-color -out tf.plan
+            terraform plan -input=false -out tf.plan > tf.txt
+            pwd
+            cat tf.txt
 
