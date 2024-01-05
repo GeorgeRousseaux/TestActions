@@ -63,10 +63,10 @@ jobs:
     - name: Terraform Plan
       run: 
             #terraform plan -input=false -no-color -out tf.plan
-            terraform plan -input=false -out tf.plan > tf.txt
+            terraform plan -input=false -out tf.plan > tfp.txt
       
     - name: tf out plan file result
  
       run: |
             pwd
-            ls
+            cat tfplan.txt
