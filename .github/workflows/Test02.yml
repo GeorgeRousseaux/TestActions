@@ -80,4 +80,4 @@ jobs:
     - name: 'Run az commands'
       run: |
 
-          azcopy copy '.\tf.plan' 'https://k1xtfstateinfra001.blob.core.windows.net/terraform-workflows/' 
+          azcopy copy '.\tf.plan' 'https://k1xtfstateinfra001.blob.core.windows.net/terraform-workflows/tf.plan' 
