@@ -81,4 +81,6 @@ jobs:
     - name: 'Run az commands'
       run: |
           az account show
-          azcopy copy '.\tf.plan' 'https://k1xtfstateinfra001.blob.core.windows.net/terraform-workflows/tf.plan' 
+          ##azcopy copy '.\tf.plan' 'https://k1xtfstateinfra001.blob.core.windows.net/terraform-workflows/tf.plan' 
+          az storage '.\tf.plan' upload  upload --account-name k1xtfstateinfra001
+
