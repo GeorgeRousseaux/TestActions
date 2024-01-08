@@ -48,7 +48,7 @@ jobs:
             pwd
             echo "folder test"
 
-            echo "${{secrets.NFRA_SP_SECRET}}"
+            echo "${{secrets.UFA_TEST}}"
 
 
 
@@ -75,7 +75,7 @@ jobs:
     - name: 'Log into Azure using github secret AZURE_CREDENTIALS'
       uses: Azure/login@v1
       with:
-          creds: ${{ secrets.NFRA_SP_SECRET }}
+          creds: ${{ secrets.INFRA_SP_SECRET }}
           enable-AzPSSession: true
 
     - name: 'Run az commands'
