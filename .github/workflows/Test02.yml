@@ -71,11 +71,11 @@ jobs:
             pwd
             /usr/bin/git log -1 --format='%H'
             cat tfplan.txt
-            echo "${{ vars.ARM_DEV }}"
+           
     - name: 'Log into Azure using github secret AZURE_CREDENTIALS'
       uses: Azure/login@v1
       with:
-          creds: ${{ secrets.INFRA_SP_SECRET }}
+          creds: ${{ secrets.UFA_TEST }}
           enable-AzPSSession: true
 
     - name: 'Run az commands'
