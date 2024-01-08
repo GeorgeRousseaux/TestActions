@@ -48,7 +48,7 @@ jobs:
             pwd
             echo "folder test"
 
-            echo "${{secrets.UFA_TEST}}"
+            echo "${{vars.ARM_DEV}}"
 
 
 
