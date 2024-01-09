@@ -51,7 +51,7 @@ jobs:
             pwd
             echo "folder test"
 
-            echo "${{vars.ARM_DEV}}"
+            echo "${{ inputs.terraform_directory }}"
 
 
 
