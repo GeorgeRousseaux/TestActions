@@ -74,9 +74,11 @@ jobs:
     #  working-directory: ./main
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: 
-            #terraform plan -input=false -no-color -out tf.plan
-            terraform plan -input=false -out tf.plan > tfplan.txt
+      shell: bash
+      run: |
+        echo 'plan<<EOF' >> $GITHUB_OUTPUT
+        terraform plan -no-color -out=tfplan >> $GITHUB_OUTPUT
+        echo 'EOF' >> $GITHUB_OUTPUT
 
     - name: Save Artifact
       id: save-artifact
