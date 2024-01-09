@@ -89,4 +89,4 @@ jobs:
           ${{ steps.plan.outputs.plan }}
           ```
 
-          Plan saved to GH artifacts.
+  
