@@ -94,8 +94,8 @@ jobs:
         body: |
           Terraform Plan:
 
-         # ```
-         # ${{ steps.plan.outputs.plan }}
-         # ```
+           ```
+              ${{ steps.plan.outputs.plan }}
+           ```
 
   
