@@ -1,1 +1,66 @@
+# This is a basic workflow to help you get started with Actions
 
+name: Test02
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  #push:
+  #  branches: [ "main" ]
+  #pull_request:
+  #  branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
+env:
+  ARM_CLIENT_ID: "0eba58bf-9f11-4836-98b9-def160de2a51" # This doesn't have to be a secret. Client IDs are not sensitive.
+  ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET}}
+  ARM_SUBSCRIPTION_ID: "4d000790-f279-46d9-811e-45f8ddf9a3aa"
+  ARM_TENANT_ID: "2bd38efa-c424-4fff-9fff-bfe89a641b09"
+jobs:
+  # This workflow contains a single job called "build"
+
+  terraform:
+    name: 'Terraform'
+    runs-on: ubuntu-latest
+    environment: development
+    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+
+    # Checkout the repository to the GitHub Actions runner
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v2
+
+    - name: Folder
+ 
+      run: |
+            pwd
+            echo "folder test"
+
+            echo "${{vars.ARM_DEV}}"
+
+
+
+          
+    # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
+    - name: Terraform Init
+      run: terraform init
+
+
+    #  working-directory: ./main
+    # Generates an execution plan for Terraform
+    - name: Terraform Plan
+      run: 
+            #terraform plan -input=false -no-color -out tf.plan
+            terraform plan -input=false -out tf.plan > tfplan.txt
