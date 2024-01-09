@@ -50,8 +50,8 @@ jobs:
       run: |
             pwd
             echo "folder test"
-
-            echo "${{ inputs.terraform_directory }}"
+            ${{ inputs.terraforom_version }}
+            echo "terraform directoy: ${{ inputs.terraform_directory }}"
 
 
 
