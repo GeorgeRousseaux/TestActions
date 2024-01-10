@@ -29,4 +29,6 @@ jobs:
             echo "hola"
             cd /
             pwd
-            ls
+            ls bin
+            echo "ahora github"
+            ls .github
