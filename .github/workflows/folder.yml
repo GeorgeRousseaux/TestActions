@@ -29,3 +29,4 @@ jobs:
             echo "hola"
             cd /
             pwd
+            ls
