@@ -37,5 +37,5 @@ jobs:
           terraform_sa: ${{ env.TF_SA }}
           terraform_version: ${{ env.TERRAFORM_VERSION }}
           #google_sa_key: ${{ secrets.GOOGLE_CREDENTIALS }}
-          github_token: ${{ env.GH_TOKEN }}
+          github_token: "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"
           pr_id: ${{ steps.pr-id.outputs.PR_NUMBER }}
