@@ -23,6 +23,7 @@ jobs:
         shell: bash
 
     steps:
-     Test:
-      run: |
-          echo "Hola"
+        - name: Folder
+          run: |
+            pwd
+            echo "hola"
