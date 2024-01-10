@@ -23,7 +23,7 @@ jobs:
         shell: bash
 
     steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v3  #super importante
         - name: Folder
         
           run: |
@@ -31,4 +31,4 @@ jobs:
             echo "hola"
 
             echo "ahora github"
-            ls ./.github/plan
+            ls ./.github/plan # path correcto
