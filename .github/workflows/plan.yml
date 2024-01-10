@@ -35,5 +35,5 @@ jobs:
         with:
           terraform_directory: "terraform"
           terraform_version: ${{ env.TERRAFORM_VERSION }}
-          github_token: "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"
+          github_token: "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"
           pr_id: ${{ steps.pr-id.outputs.PR_NUMBER }}
