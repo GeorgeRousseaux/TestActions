@@ -81,4 +81,4 @@ jobs:
     - name: 'Run az commands'
       run: |
           az account show
-          az storage file upload --account-name k1xtfstateinfra001 --account-key s31lU7ngU0wz9ojT8sVQ0LLB/lAZRW0SgfOktjWKrxIufuvc3ELVZygU3XJsl50rh02freDFtP7d+AStsdkMZg==  --path filetesting --source tf.plan --share-name test02
+         # az storage file upload --account-name k1xtfstateinfra001 --account-key s31lU7ngU0wz9ojT8sVQ0LLB/lAZRW0SgfOktjWKrxIufuvc3ELVZygU3XJsl50rh02freDFtP7d+AStsdkMZg==  --path filetesting --source tf.plan --share-name test02
