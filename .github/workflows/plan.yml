@@ -12,7 +12,7 @@ env:
   ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET}}
   ARM_SUBSCRIPTION_ID: "4d000790-f279-46d9-811e-45f8ddf9a3aa"
   ARM_TENANT_ID: "2bd38efa-c424-4fff-9fff-bfe89a641b09"
-  GH_TOKEN: "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"
+  GH_TOKEN: "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"
 jobs:
   terraform_plan:
     runs-on: ubuntu-latest
