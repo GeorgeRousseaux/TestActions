@@ -47,6 +47,7 @@ runs:
         echo 'EOF' >> $GITHUB_OUTPUT
         echo "soy jorge"
         pwd
+        ls
       env:
         ARM_CLIENT_ID: "0eba58bf-9f11-4836-98b9-def160de2a51" # This doesn't have to be a secret. Client IDs are not sensitive.
         ARM_CLIENT_SECRET: "6Ev8Q~20SNO2xXANk2_lmRWeR5fV3SRahz_MBcs9"
@@ -60,7 +61,7 @@ runs:
       uses: actions/upload-artifact@v3
       with:
         name: ${{ inputs.pr_id }}-tf-plan
-        path: ${{ inputs.terraform_directory }}/tfplan
+        path: ./tfplan
 
     - name: Comment Plan
       id: comment-plan
