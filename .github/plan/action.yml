@@ -6,9 +6,7 @@ inputs:
   terraform_directory:
     description: 'Directory that holds Terraform code'
     required: true
-  terraform_sa: 
-    description: 'GCP service account used for Terraform actions'
-    required: true
+ 
   terraform_version: 
     description: 'Terraform Version'
     required: true
@@ -34,7 +32,7 @@ runs:
 
     - name: Terraform Init
       id: init
-      working-directory: ${{ inputs.terraform_directory }}
+      #working-directory: ${{ inputs.terraform_directory }}
       shell: bash
       run: |
         terraform init
