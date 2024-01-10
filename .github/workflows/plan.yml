@@ -8,6 +8,10 @@ env:
   TERRAFORM_VERSION: "1.2.9"
   TF_IN_AUTOMATION: "True"
 
+  ARM_CLIENT_ID: "0eba58bf-9f11-4836-98b9-def160de2a51" # This doesn't have to be a secret. Client IDs are not sensitive.
+  ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET}}
+  ARM_SUBSCRIPTION_ID: "4d000790-f279-46d9-811e-45f8ddf9a3aa"
+  ARM_TENANT_ID: "2bd38efa-c424-4fff-9fff-bfe89a641b09"
 jobs:
   terraform_plan:
     runs-on: ubuntu-latest
