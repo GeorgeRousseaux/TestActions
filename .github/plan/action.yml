@@ -39,7 +39,7 @@ runs:
 
     - name: Terraform Plan
       id: plan
-      working-directory: ${{ inputs.terraform_directory }}
+      #working-directory: ${{ inputs.terraform_directory }}
       shell: bash
       run: |
         echo 'plan<<EOF' >> $GITHUB_OUTPUT
