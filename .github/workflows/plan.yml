@@ -33,7 +33,7 @@ jobs:
       - name: Terraform Plan
         uses: ./.github/plan
         with:
-          terraform_directory: "terraform"
+          terraform_directory: "./.terraform"
           terraform_version: ${{ env.TERRAFORM_VERSION }}
           github_token: "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"
           pr_id: ${{ steps.pr-id.outputs.PR_NUMBER }}
