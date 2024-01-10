@@ -16,9 +16,7 @@ inputs:
   github_token: 
     description: 'GitHub token for auth'
     required: true
-  google_sa_key:
-    description: 'JSON key for GCP service account'
-    required: true
+ 
   pr_id:
     description: 'Pull request ID'
     required: true
@@ -32,15 +30,7 @@ runs:
         terraform_version: ${{ inputs.terraforom_version }}
         terraform_wrapper: false
 
-    - id: 'auth'
-      name: 'Authenticate to Google Cloud'
-      uses: 'google-github-actions/auth@v1'
-      with:
-        service_account: ${{ inputs.terraform_sa }}
-        credentials_json: ${{ inputs.google_sa_key }}
-
-    - name: 'Set up Cloud SDK'
-      uses: 'google-github-actions/setup-gcloud@v0.6.0'
+ 
 
     - name: Terraform Init
       id: init
