@@ -25,7 +25,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "test-rg" {
-  name     = "rg-jorge06"
+  name     = "rg-jorge07"
   location = "Central US"
 }
 
