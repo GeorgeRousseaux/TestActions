@@ -29,8 +29,6 @@ jobs:
           run: |
             pwd
             echo "hola"
-            cd /
-            pwd
-            ls bin
+
             echo "ahora github"
-            ls .github
+            ls ./.github/plan
