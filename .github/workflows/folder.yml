@@ -1,0 +1,7 @@
+ - name: Folder
+ 
+      run: |
+            pwd
+            echo "folder test"
+
+            echo "${{vars.ARM_DEV}}"
